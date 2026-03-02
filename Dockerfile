@@ -8,6 +8,7 @@ COPY start.sh /tailscale.d/start.sh
 ENV TAILSCALE_VERSION "latest"
 ENV TAILSCALE_HOSTNAME "railway-app"
 ENV TAILSCALE_ADDITIONAL_ARGS ""
+ENV TAILSCALE_SERVE_TARGET ""
 
 RUN wget https://pkgs.tailscale.com/stable/tailscale_${TAILSCALE_VERSION}_amd64.tgz && \
   tar xzf tailscale_${TAILSCALE_VERSION}_amd64.tgz --strip-components=1
